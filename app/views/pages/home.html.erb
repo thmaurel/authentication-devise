@@ -1,2 +1,9 @@
-<h1>Pages#home</h1>
+
+<% if user_signed_in? %>
+  <h1>Bienvenue <%= current_user.first_name %>!</h1>
+  <%= link_to "Log out", destroy_user_session_path, method: :delete%>
+<% end %>
+
+
 <p>Find me in app/views/pages/home.html.erb</p>
+<a href="#" class="btn btn-primary">Contact us</a>
